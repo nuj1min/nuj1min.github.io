@@ -7,7 +7,7 @@
 👉 **[포트폴리오 웹사이트 바로가기](https://nuj1min.github.io)**
 
 ## 🛠️ Tech Stack
-- **Backend & Frameworks:** Java, Spring Boot, Node.js, Express
+- **Backend & Frameworks:** Java, Spring Boot, MySQL, C#
 - **Infrastructure:** Docker
 - **Low-level & HW:** ARM Assembly, Microprocessor Control
 - **Frontend:** HTML5, CSS3, JavaScript
