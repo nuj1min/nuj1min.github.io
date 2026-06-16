@@ -7,10 +7,9 @@
 👉 **[포트폴리오 웹사이트 바로가기](https://nuj1min.github.io)**
 
 ## 🛠️ Tech Stack
-- **Backend & Frameworks:** Java, Spring Boot, MySQL, C#
-- **Infrastructure:** Docker
-- **Low-level & HW:** ARM Assembly, Microprocessor Control
-- **Frontend:** HTML5, CSS3, JavaScript
+- **Backend & Frameworks:** Java, Spring Boot, MySQL
+- **Infrastructure & Cloud:** AWS, Docker, Linux
+- **Others:** Git, JWT, Unity(C#)
 
 ## 🚀 Key Projects & Activities
 - **whatshu:** GDG GTL 세션 참가자들의 효율적인 출결 관리를 위한 체크인 웹 서비스 구축
