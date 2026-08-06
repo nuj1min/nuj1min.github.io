@@ -1,31 +1,23 @@
-# ☁️ Minjun Kim's Portfolio (DEV.IO)
+# 김민준 Backend Portfolio
 
-안녕하세요! 안정적인 서버 인프라와 백엔드 구축에 관심이 많은 백엔드 / 클라우드 엔지니어 김민준의 포트폴리오 웹사이트입니다.
-단순히 동작하는 코드를 넘어, 구조적으로 탄탄하고 확장 가능한 시스템을 설계하는 것을 목표로 합니다.
+인증과 주문처럼 서비스 신뢰를 좌우하는 흐름을 설계하고 구현하는 백엔드 개발자 김민준의 포트폴리오입니다.
 
-## 🔗 Website
-👉 **[포트폴리오 웹사이트 바로가기](https://nuj1min.github.io)**
+## Website
 
-## 🛠️ Stacks
+[https://nuj1min.github.io](https://nuj1min.github.io)
 
-### 💻 Languages
-- **Python, C++, JavaScript, Java, CSS**
+## Featured work
 
-### ⚙️ Backend & DB
-- **Spring Boot, MySQL, JPA**
+- **여기도** — 지역 문화 아카이빙 플랫폼. 인증·회원 도메인 13개 API, JWT/OAuth, Redis 기반 Refresh Token Rotation 구현
+- **바비든든** — 교내 식당 주문 서비스. 메뉴·주문·관리자 인증, 주문 상태 전이와 이벤트 발행 흐름 구현
+- **Whatshu** — GDG 행사 출석 관리 서비스. 백엔드 구조와 배포 환경 설계
+- **Crossy HUFS** — 한국외대 캠퍼스 기반 3D 아케이드 게임. 프로젝트 리드 및 장애물 로직 구현
 
-### ☁️ Infra & Core
-- **Linux (Ubuntu), AWS (EC2, S3, RDS), Docker, Git, GitHub**
+## Focus
 
-### 🛠️ Tool
-- **VS Code, IntelliJ, Spring, Discord, Notion**
+Java, Spring Boot, Spring Security, JPA, MySQL, Redis, Docker, AWS, JUnit 5
 
-## 🚀 Key Projects & Activities
-- **whatshu:** GDG 캠퍼스 활동 중 구축한 모바일 출석 체크 서비스 (Java/Spring Boot, JWT, Docker, AWS)
-- **Crossy Road HUFS:** 한국외대 글로벌캠퍼스 지형을 반영한 3D 아케이드 게임 (Unity, C#)
-- **Activities:** Google Developer Groups (GDG) Campus, University Makeus Challenge (UMC), 컴퓨터공학부 학생회 집행부장/기획부장
+## Contact
 
-## 📫 Contact
-- **Email:** minjun0123@naver.com
-- **GitHub:** [https://github.com/nuj1min](https://github.com/nuj1min)
-- **Instagram:** [@nuj1min](https://instagram.com/nuj1min)
+- Email: [minjun0123@naver.com](mailto:minjun0123@naver.com)
+- GitHub: [github.com/nuj1min](https://github.com/nuj1min)
