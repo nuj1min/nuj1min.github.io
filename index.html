@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>김민준 | Backend Developer</title>
-  <meta name="description" content="인증, 주문, 데이터 흐름을 안정적인 서버 구조로 구현하는 백엔드 개발자 김민준의 포트폴리오입니다.">
+  <meta name="description" content="여기도 인증·회원과 다시찾음 풀스택 개발 사례를 담은 백엔드 개발자 김민준의 포트폴리오입니다.">
   <meta name="theme-color" content="#10130f">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="ko_KR">
@@ -57,12 +57,12 @@
           <p class="eyebrow"><span class="status-dot"></span> Backend Developer · Computer Engineering</p>
           <h1>코드 너머, ‘사람’과<br><span>‘시스템’을 잇는 개발자 김민준</span>입니다.</h1>
           <p class="hero-description">
-            “개발의 본질은 결국 ‘소통’과 ‘문제 해결’에 있으며<br>
-            이것이 팀과 기술을 연결한다고 믿고 있습니다.”
+            인증의 실패 조건과 AI 연동 흐름을 설계합니다.<br>
+            화면부터 API·배포까지 연결하며, 변경의 이유를 코드와 검증 기록으로 남깁니다.
           </p>
           <div class="hero-actions">
             <a class="button button-primary" href="#featured-project">대표 프로젝트 보기 <span aria-hidden="true">↓</span></a>
-            <a class="button button-ghost" href="mailto:minjun0123@naver.com">이메일 보내기</a>
+            <a class="button button-ghost" href="output/pdf/김민준_개발자_포트폴리오.pdf" download>포트폴리오 PDF 다운로드</a>
           </div>
           <dl class="hero-facts" aria-label="핵심 정보">
             <div>
@@ -70,8 +70,8 @@
               <dd>Java · Spring Boot</dd>
             </div>
             <div>
-              <dt>Current</dt>
-              <dd>여기도 Backend</dd>
+              <dt>Projects</dt>
+              <dd>여기도 · 다시찾음</dd>
             </div>
             <div>
               <dt>Based in</dt>
@@ -115,60 +115,52 @@
           <p>프로젝트 전체 기능보다 제가 직접 맡고 결정한 영역을 중심으로 정리했습니다.</p>
         </div>
 
-        <article class="featured-project" id="featured-project">
-          <div class="project-visual yeogido-visual">
-            <img src="images/yeogido-preview.jpg" width="1600" height="1512" alt="여기도 지역 소상공인 홍보 기능 와이어프레임" loading="lazy">
-            <div class="visual-badge"><span>Featured</span> 2026.07 — Present</div>
-          </div>
-          <div class="project-content">
-            <div class="project-title-row">
-              <div>
-                <p class="project-type">Backend · Authentication & User</p>
-                <h3>여기도 <span>Yeogido</span></h3>
-              </div>
-              <a class="round-link" href="https://github.com/yeogido/backend" target="_blank" rel="noopener noreferrer" aria-label="여기도 백엔드 GitHub 저장소 열기">↗</a>
-            </div>
-            <p class="project-summary">
-              흩어진 지역 문화 정보를 지도·코스·여행 기록으로 연결하는 로컬 문화 아카이빙 플랫폼입니다.
-              백엔드에서 <strong>인증과 회원 도메인</strong>을 맡아 13개 API를 완료했습니다.
-            </p>
+        <!-- selected-projects:start -->
+<article class="case-preview" id="featured-project">
+      <div class="case-preview-heading">
+        <p class="eyebrow">Selected work / 01</p>
+        <h3>여기도<span>Yeogido</span></h3>
+        <p class="case-headline">동시 재발급과 여러 기기를 고려한 인증 흐름</p>
+        <p class="project-summary">지역의 숨은 명소와 문화행사, 소상공인 공간을 발견하고 여행 코스와 기록을 공유하는 지역 기반 여행 플랫폼입니다.</p>
+        <p class="case-period">2026.07부터 개발</p>
+        <ul class="tag-list" aria-label="기술 스택"><li>Java</li><li>Spring Boot</li><li>Spring Security</li><li>JPA</li><li>MySQL</li><li>Redis</li><li>JUnit 5</li></ul>
+      </div>
+      <div class="case-preview-body">
+        <p class="role-label">Backend · 인증·회원 도메인</p>
+        <p class="ownership">이메일·소셜 로그인부터 토큰 재발급, 프로필 관리, 비밀번호 재설정과 회원 탈퇴까지 인증·회원 도메인을 담당했습니다.</p>
+        <dl class="case-summary">
+          <div><dt>문제</dt><dd>동일 토큰의 동시 재발급, 기기 간 로그인 간섭, 탈퇴 계정의 인증 경로 누락을 다뤘습니다.</dd></div>
+          <div><dt>선택</dt><dd>Redis 원자적 교체와 세션별 저장을 적용하고, 인증 경로마다 회원 상태 검증을 반영했습니다.</dd></div>
+          <div><dt>결과</dt><dd>토큰 비교·교체 성공과 실패를 단위 테스트로 검증하고, 현재 세션 로그아웃과 탈퇴 시 전체 세션 정리를 구분했습니다.</dd></div>
+        </dl>
+        <div class="case-actions"><a class="button button-primary" href="projects/yeogido.html">문제 해결 과정 읽기 <span aria-hidden="true">↗</span></a>
+        <a class="text-link" href="https://github.com/yeogido/backend/pull/216" target="_blank" rel="noopener noreferrer">대표 PR ↗</a></div>
+      </div>
+    </article>
+<article class="case-preview" >
+      <div class="case-preview-heading">
+        <p class="eyebrow">Selected work / 02</p>
+        <h3>다시찾음<span>Dasi Find</span></h3>
+        <p class="case-headline">모바일 화면부터 AI 연동 API·배포까지</p>
+        <p class="project-summary">분실물의 사진·특징·시간·장소를 한 번 등록해 경찰청 공개 습득물 중 확인할 가치가 있는 후보를 찾도록 돕는 모바일 웹 프로젝트입니다.</p>
+        <p class="case-period">2026.08–09 개발 기록 기준</p>
+        <ul class="tag-list" aria-label="기술 스택"><li>React</li><li>TypeScript</li><li>Spring Boot</li><li>MySQL</li><li>S3</li><li>Docker</li><li>CloudFront</li><li>GitHub Actions</li></ul>
+      </div>
+      <div class="case-preview-body">
+        <p class="role-label">Full-stack · FE·BE·배포</p>
+        <p class="ownership">React 프론트엔드와 Spring Boot 백엔드 개발부터 배포 환경 구성까지 담당했습니다. 화면 입력, API 계약, 인증·저장, 배포 경로를 연결했습니다.</p>
+        <dl class="case-summary">
+          <div><dt>문제</dt><dd>화면 입력과 저장 좌표의 불일치, 초기 JavaScript 크기, AI 서버와의 연동 실패 조건을 다뤘습니다.</dd></div>
+          <div><dt>선택</dt><dd>입력 계약을 맞추고 화면별 코드 분할을 적용했습니다. AI 분석은 내부 HTTP 계약으로 분리했습니다.</dd></div>
+          <div><dt>결과</dt><dd>당시 초기 JavaScript 빌드 크기를 약 540KB에서 265.54KB로 줄이고, 분석 결과 연결과 만료 경계를 검증했습니다.</dd></div>
+        </dl>
+        <div class="case-actions"><a class="button button-primary" href="projects/dasi-find.html">문제 해결 과정 읽기 <span aria-hidden="true">↗</span></a>
+        <a class="text-link" href="https://github.com/dasi-find/FE/pull/60" target="_blank" rel="noopener noreferrer">대표 PR ↗</a></div>
+      </div>
+    </article>
+<!-- selected-projects:end -->
 
-            <div class="project-metrics" aria-label="여기도 프로젝트 지표">
-              <div><strong>61</strong><span>MVP API 명세</span></div>
-              <div><strong>13</strong><span>직접 담당한 API</span></div>
-              <div><strong>2</strong><span>소셜 로그인 Provider</span></div>
-            </div>
-
-            <div class="contribution-list">
-              <div class="contribution">
-                <span class="contribution-index">01</span>
-                <div>
-                  <h4>인증 생명주기를 하나의 흐름으로 설계</h4>
-                  <p>이메일 회원가입·로그인부터 카카오/네이버 OAuth, 토큰 재발급·로그아웃, 비밀번호 재설정까지 인증 전 과정을 구현했습니다.</p>
-                </div>
-              </div>
-              <div class="contribution">
-                <span class="contribution-index">02</span>
-                <div>
-                  <h4>Refresh Token Rotation을 원자적으로 처리</h4>
-                  <p>Redis Lua Script로 기존 토큰 검증과 새 토큰 교체를 한 번에 수행해, 동시에 들어온 재발급 요청이 모두 성공하는 경쟁 조건을 차단했습니다.</p>
-                </div>
-              </div>
-              <div class="contribution">
-                <span class="contribution-index">03</span>
-                <div>
-                  <h4>정상 경로 밖의 실패까지 API 계약에 반영</h4>
-                  <p>동시 회원가입의 DB UNIQUE 충돌, 소셜 프로필 이미지 업로드 실패, 만료·재사용 토큰을 구분해 처리하고 핵심 인증 로직을 테스트로 검증했습니다.</p>
-                </div>
-              </div>
-            </div>
-
-            <ul class="tag-list" aria-label="여기도 기술 스택">
-              <li>Java 21</li><li>Spring Boot</li><li>Spring Security</li><li>JPA</li><li>MySQL</li><li>Redis</li><li>AWS S3</li><li>JUnit 5</li>
-            </ul>
-          </div>
-        </article>
-
+        <div class="other-projects-heading"><p class="eyebrow">More Projects</p><h3>다른 도메인에서 쌓은 경험</h3></div>
         <div class="project-grid">
           <article class="project-card babi-card">
             <div class="card-topline">
@@ -183,10 +175,10 @@
             <h3>바비든든</h3>
             <p class="project-summary">교내 식당에서 QR로 메뉴를 확인하고 주문·결제·픽업 현황까지 연결하는 <strong>교내 식당 QR 주문 서비스</strong>입니다. 메뉴, 주문, 관리자 인증 영역을 구현했습니다.</p>
             <ul class="bullet-list">
-              <li>품절·중복 옵션·최대 수량 등 주문 생성 규칙 검증</li>
-              <li>PREPARING → READY → COMPLETED 상태 전이 제한</li>
-              <li>트랜잭션 커밋 이후에만 주문 이벤트를 발행하도록 보완</li>
-              <li>관리자 JWT 인증과 메뉴 등록·수정·판매 상태 관리 구현</li>
+              <li><strong>담당</strong> 메뉴·주문 API, 관리자 JWT 인증과 판매 상태 관리</li>
+              <li><strong>문제</strong> 품절·중복 옵션·최대 수량 위반과 허용되지 않은 주문 상태 변경을 통제해야 했습니다.</li>
+              <li><strong>해결</strong> 주문 생성 규칙을 검증하고 PREPARING → READY → COMPLETED 상태 전이를 제한했습니다.</li>
+              <li><strong>보완</strong> 트랜잭션 커밋 이후에만 주문 이벤트를 발행하도록 변경했습니다.</li>
             </ul>
             <ul class="tag-list"><li>Spring Boot</li><li>MySQL</li><li>Docker</li><li>JWT</li><li>JUnit 5</li></ul>
           </article>
@@ -200,9 +192,10 @@
             <h3>Whatshu</h3>
             <p class="project-summary">Google Form으로 분산되던 GDG 행사 출결을 세션·멤버 단위로 관리하는 모바일 출석 서비스입니다.</p>
             <ul class="bullet-list">
-              <li>Spring Boot 기반 API와 인증 구조 설계</li>
-              <li>Swagger로 프론트엔드와 요청·응답 계약 공유</li>
-              <li>Docker·AWS EC2·GitHub Actions 배포 환경 구성</li>
+              <li><strong>문제</strong> Google Form으로 분산되던 행사 출결 정보를 세션·멤버 단위로 관리할 필요가 있었습니다.</li>
+              <li><strong>담당</strong> 백엔드 리드로 Spring Boot API·인증 구조와 배포 환경을 설계했습니다.</li>
+              <li><strong>협업</strong> Swagger로 프론트엔드와 요청·응답 계약을 공유했습니다.</li>
+              <li><strong>구현</strong> Docker·AWS EC2·GitHub Actions 기반 배포 환경을 구성했습니다.</li>
             </ul>
             <ul class="tag-list"><li>Java</li><li>Spring Boot</li><li>MySQL</li><li>Docker</li><li>AWS</li></ul>
           </article>
@@ -219,9 +212,9 @@
             <h3>Crossy HUFS</h3>
             <p class="project-summary">한국외대 글로벌캠퍼스를 배경으로 재해석한 3D 아케이드 게임입니다. 팀장으로 기획·일정·통합을 맡고 핵심 장애물 로직을 개발했습니다.</p>
             <ul class="bullet-list">
-              <li>랜덤 장애물 생성과 중복 배치 방지 로직 구현</li>
-              <li>차량·통나무 생성 및 충돌 처리 구조 개선</li>
-              <li>팀원 PR 통합과 빌드 안정화, 데모 일정 관리</li>
+              <li><strong>담당</strong> 팀장으로 기획·일정·통합을 맡고 랜덤 장애물 생성 로직을 구현했습니다.</li>
+              <li><strong>개발</strong> 장애물 중복 배치를 방지하고 차량·통나무 생성과 충돌 처리 구조를 개선했습니다.</li>
+              <li><strong>협업</strong> 팀원 PR 통합과 빌드 안정화, 데모 일정 관리를 담당했습니다.</li>
             </ul>
             <ul class="tag-list"><li>C#</li><li>Unity</li><li>OOP</li><li>GitHub Projects</li></ul>
           </article>
@@ -257,9 +250,13 @@
             <time datetime="2026-02">2026.02 — 08</time>
             <div><h3>학생회 기획부장 · UMC 10기</h3><p>조직 기획과 Spring 백엔드 심화</p><span>조직 운영과 테스트 기반 서버 개발을 병행했습니다.</span></div>
           </li>
-          <li class="timeline-current">
+          <li>
             <time datetime="2026-07">2026.07 — Present</time>
             <div><h3>여기도 · 바비든든 백엔드</h3><p>인증/회원 · 메뉴/주문/관리자</p><span>경쟁 조건, 트랜잭션, 상태 전이처럼 운영 중 발생할 문제를 코드로 통제하고 있습니다.</span></div>
+          </li>
+          <li class="timeline-current">
+            <time datetime="2026-08">2026.08 — 09 개발 기록</time>
+            <div><h3>다시찾음 풀스택 개발</h3><p>React · Spring Boot · 배포 환경</p><span>모바일 화면과 API 계약을 연결하고, AI 분석 연동·수색카드 상태 경계를 구현했습니다.</span></div>
           </li>
         </ol>
       </div>
@@ -295,12 +292,12 @@
           <article>
             <span class="skill-number">05</span>
             <h3>Test · Documentation</h3>
-            <p>JUnit 5로 핵심 규칙을 검증하고 Swagger·API 명세로 팀 간 계약을 맞췄습니다.</p>
+            <p>토큰 교체, 분석 결과 소유권, 수색 만료 경계를 테스트하고 API 명세로 화면·서버 계약을 맞췄습니다.</p>
           </article>
           <article>
             <span class="skill-number">06</span>
             <h3>Docker · AWS</h3>
-            <p>동일한 실행 환경을 구성하고 EC2 배포와 GitHub Actions 자동화 경험을 쌓았습니다.</p>
+            <p>다시찾음의 EC2·Docker Compose와 GitHub Actions·OIDC·SSM 배포, CloudFront HTTPS 연결을 구성했습니다.</p>
           </article>
         </div>
       </div>
@@ -337,7 +334,7 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <span>© 2026 Minjun Kim</span>
-      <span>Designed around evidence, not percentages.</span>
+      <span>프로젝트 역할 · 판단 · 검증 기록</span>
       <a href="#home">Back to top ↑</a>
     </div>
   </footer>
