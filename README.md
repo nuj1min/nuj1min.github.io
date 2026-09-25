@@ -36,12 +36,4 @@ python3 scripts/build_portfolio.py
 - 공통 스타일: `css/portfolio.css`
 - 내용 검토 사항: `docs/content-review.md`
 
-별도 프레임워크나 설치 과정 없이 정적 HTML로 GitHub Pages에서 제공됩니다. PDF도 같은 대표 프로젝트 콘텐츠 원본을 사용합니다. 제출용 PDF는 `output/pdf/김민준_개발자_포트폴리오.pdf`에 있습니다.
-
-PDF 재생성 (Python `reportlab` 필요):
-
-```sh
-python3 scripts/build_pdf.py --font /path/to/korean-font.ttf
-```
-
-기본 글꼴 경로는 macOS의 AppleGothic입니다. 다른 환경에서는 한글을 지원하는 TrueType 글꼴을 지정하세요. PDF는 9쪽이며 한글 글꼴과 클릭 가능한 자료 링크를 포함합니다.
+별도 프레임워크나 설치 과정 없이 정적 HTML로 GitHub Pages에서 제공됩니다.
